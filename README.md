@@ -164,6 +164,66 @@ Run `./scripts/convert.sh --tool all` to generate tool-specific outputs locally.
 
 ---
 
+## Custom Legal Pack
+
+This fork also includes a small custom legal pack focused on truth-bound dispute work for Codex and Claude Code. These skills are designed for evidence-grounded employment, contract, severance, wage, equity, and mediation-readiness workflows.
+
+**Important operating rule:** JSON or source records should remain the truth layer. Markdown is presentation and review material, not canonical evidence.
+
+| Skill | Use It When | Path |
+|------|-------------|------|
+| **legal-dispute-issue-map** | You need chronology, admissions, contradictions, issue-lane separation, or proof gaps before drafting. | [.codex/skills/legal-dispute-issue-map](.codex/skills/legal-dispute-issue-map/) |
+| **legal-fact-verifier** | You want to pressure-test a demand, rebuttal, timeline, memo, or witness outline for overstatement or unsupported claims. | [.codex/skills/legal-fact-verifier](.codex/skills/legal-fact-verifier/) |
+| **legal-mediation-strategist** | You want mediation issue ranking, leverage mapping, readiness blockers, or BATNA/WATNA framing without inventing numbers or motives. | [.codex/skills/legal-mediation-strategist](.codex/skills/legal-mediation-strategist/) |
+| **legal-evidence-matrix** | You need an exhibit map, admissions grid, contradiction chart, or discovery-prep table tied to real sources. | [.codex/skills/legal-evidence-matrix](.codex/skills/legal-evidence-matrix/) |
+| **legal-contract-dispute-reviewer** | You need clause-by-clause comparison of contract text versus real-world conduct. | [.codex/skills/legal-contract-dispute-reviewer](.codex/skills/legal-contract-dispute-reviewer/) |
+
+### Quick Examples
+
+Use prompts like:
+
+```text
+Use legal-dispute-issue-map.
+Build a source-grounded issue map for this severance and equity dispute.
+Separate [Fact], [Inference], [Legal Argument], [Open Question], and [Needs Evidence].
+```
+
+```text
+Use legal-fact-verifier.
+Review this mediation statement for any unsupported factual assertions, invented certainty, or hidden proof gaps.
+Findings first.
+```
+
+```text
+Use legal-mediation-strategist.
+Prepare a mediation-readiness strategy from the current evidence record.
+Rank issues by leverage, identify readiness blockers, and keep damages Unknown where the record does not support numbers.
+```
+
+```text
+Use legal-evidence-matrix.
+Convert these source materials into a dated evidence matrix with issue lanes, key quotes, admissions, contradictions, and follow-up needs.
+```
+
+```text
+Use legal-contract-dispute-reviewer.
+Compare Sections 6.b and 6.f against the parties' conduct and identify where performance, tender, notice, or release handling broke down.
+```
+
+### Suggested Order
+
+For most disputes, the cleanest sequence is:
+
+1. `legal-evidence-matrix`
+2. `legal-dispute-issue-map`
+3. `legal-contract-dispute-reviewer`
+4. `legal-fact-verifier`
+5. `legal-mediation-strategist`
+
+That order keeps evidence, chronology, and clause-versus-conduct analysis ahead of polished strategy language.
+
+---
+
 ## Personas
 
 Pre-configured agent identities with curated skill loadouts, workflows, and distinct communication styles. Personas go beyond "use these skills" — they define how an agent thinks, prioritizes, and communicates.
