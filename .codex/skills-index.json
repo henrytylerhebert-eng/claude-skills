@@ -3,7 +3,7 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/alirezarezvani/claude-skills",
-  "total_skills": 183,
+  "total_skills": 188,
   "skills": [
     {
       "name": "business-growth-skills",
@@ -624,6 +624,36 @@
       "description": "SaaS financial health advisor. Use when a user shares revenue or customer numbers, or mentions ARR, MRR, churn, LTV, CAC, NRR, or asks how their SaaS business is doing."
     },
     {
+      "name": "legal-contract-dispute-reviewer",
+      "source": "../../.codex/skills/legal-contract-dispute-reviewer",
+      "category": "legal",
+      "description": "Compare contract text against real-world conduct in disputes over notice, severance, release conditions, payment obligations, vesting, and condition precedents."
+    },
+    {
+      "name": "legal-dispute-issue-map",
+      "source": "../../.codex/skills/legal-dispute-issue-map",
+      "category": "legal",
+      "description": "Build a truth-bound issue map for employment, contract, severance, wage, equity, or commercial disputes. Useful for chronology, admissions, contradictions, proof gaps, and issue-lane separation."
+    },
+    {
+      "name": "legal-evidence-matrix",
+      "source": "../../.codex/skills/legal-evidence-matrix",
+      "category": "legal",
+      "description": "Convert dispute materials into a structured evidence matrix with dates, source paths, issue lanes, short quotes, significance, and proof gaps for exhibits and discovery prep."
+    },
+    {
+      "name": "legal-fact-verifier",
+      "source": "../../.codex/skills/legal-fact-verifier",
+      "category": "legal",
+      "description": "Adversarial verification for legal analysis, mediation briefs, demand letters, and rebuttals. Strips speculation, checks source support, and flags overstatement before reliance."
+    },
+    {
+      "name": "legal-mediation-strategist",
+      "source": "../../.codex/skills/legal-mediation-strategist",
+      "category": "legal",
+      "description": "Prepare a mediation-ready dispute strategy from a source-grounded record. Covers issue ranking, party positions, leverage, bounded BATNA/WATNA/ZOPA framing, sequencing, and readiness blockers."
+    },
+    {
       "name": "ab-test-setup",
       "source": "../../marketing-skill/skills/ab-test-setup",
       "category": "marketing",
@@ -1149,6 +1179,11 @@
       "count": 14,
       "source": "../../ra-qm-team",
       "description": "Regulatory affairs and quality management skills"
+    },
+    "legal": {
+      "count": 5,
+      "source": "../../.codex/skills",
+      "description": "Custom legal dispute, mediation, verification, evidence-matrix, and contract-conduct comparison skills"
     }
   }
 }
