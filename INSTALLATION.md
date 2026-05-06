@@ -5,6 +5,7 @@ Complete installation guide for all 205+ production-ready skills across multiple
 ## Table of Contents
 
 - [Quick Start](#quick-start)
+- [Custom Legal Pack](#custom-legal-pack)
 - [Claude Code Native Marketplace](#claude-code-native-marketplace-new)
 - [Universal Installer](#universal-installer)
 - [OpenAI Codex Installation](#openai-codex-installation)
@@ -85,6 +86,62 @@ This single command installs all skills to all supported agents automatically.
 - ✅ Works across all skill formats
 
 Learn more: https://www.agentskills.in
+
+---
+
+## Custom Legal Pack
+
+This fork includes a small custom legal pack for truth-bound dispute work:
+
+- `legal-dispute-issue-map`
+- `legal-fact-verifier`
+- `legal-mediation-strategist`
+- `legal-evidence-matrix`
+- `legal-contract-dispute-reviewer`
+
+These legal skills are specific to this fork and should be treated as evidence-grounded support tools for employment, contract, severance, wage, equity, and mediation-readiness workflows.
+
+**Important rule:** source records or canonical JSON should remain the truth layer. Markdown is presentation and review material, not canonical evidence.
+
+### Install the Legal Pack Manually
+
+If you want the custom legal skills from this fork, the most reliable path is manual installation:
+
+```bash
+git clone https://github.com/henrytylerhebert-eng/claude-skills.git
+cd claude-skills
+
+# Claude Code
+cp -R .codex/skills/legal-* ~/.claude/skills/
+
+# OpenAI Codex
+cp -R .codex/skills/legal-* ~/.codex/skills/
+```
+
+### Install a Single Legal Skill
+
+```bash
+git clone https://github.com/henrytylerhebert-eng/claude-skills.git
+cd claude-skills
+
+# Example: install only the fact verifier for Claude Code
+cp -R .codex/skills/legal-fact-verifier ~/.claude/skills/
+
+# Example: install only the mediation strategist for Codex
+cp -R .codex/skills/legal-mediation-strategist ~/.codex/skills/
+```
+
+You can then invoke the installed skills by name inside Claude Code or Codex using prompts like:
+
+```text
+Use legal-fact-verifier.
+Review this demand letter for unsupported factual claims, fake certainty, and missing source support.
+```
+
+```text
+Use legal-mediation-strategist.
+Prepare a mediation-readiness strategy from the current evidence record and keep unsupported damages as Unknown.
+```
 
 ---
 
